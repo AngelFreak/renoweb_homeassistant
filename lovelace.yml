@@ -1,0 +1,10 @@
+entities:
+  - entity: sensor.renovation_rest_mad_formatted
+  - entity: sensor.renovation_4delt_beholder_formatted
+  - entity: sensor.renovation_storskrald_formatted
+  - entity: sensor.renovation_haveaffald_formatted
+header:
+  image: /local/images/headers/skraldebil.jpg
+  type: picture
+title: Garbage
+type: entities
