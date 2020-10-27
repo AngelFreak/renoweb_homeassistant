@@ -31,7 +31,7 @@ sensor:
           {% set date = states.sensor.renovation_storskrald.state %}
           {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
 
-          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdays = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
           {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
           {% set weekday = weekdays[weekdaynumber] %}
 
@@ -49,7 +49,7 @@ sensor:
           {% set date = states.sensor.renovation_haveaffald.state %}
           {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
 
-          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdays = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
           {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
           {% set weekday = weekdays[weekdaynumber] %}
 
@@ -67,7 +67,7 @@ sensor:
           {% set date = states.sensor.renovation_rest_mad.state %}
           {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
 
-          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdays = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
           {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
           {% set weekday = weekdays[weekdaynumber] %}
 
@@ -85,7 +85,7 @@ sensor:
           {% set date = states.sensor.renovation_4delt_beholder.state %}
           {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
 
-          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdays = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
           {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
           {% set weekday = weekdays[weekdaynumber] %}
 
