@@ -1,0 +1,99 @@
+sensor:
+  - platform: rest
+    name: garbage_collection_data
+    resource: 'https://servicesgh.renoweb.dk/v1_13/GetJSONContainerList.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&adressId=7650&fullinfo=1&supportsSharedEquipment=1'
+    headers:
+      Content-Type: application/json
+    json_attributes:
+      - list
+    value_template: '1'
+    
+  - platform: template
+    sensors:
+      renovation_storskrald:
+        value_template: '{{ strptime(states.sensor.garbage_collection_data.attributes.list[0].nextpickupdate | regex_replace(find="^.* ", replace="", ignorecase=False), "%d-%m-%Y") }}'
+        device_class: timestamp
+      renovation_haveaffald:
+        value_template: '{{ strptime(states.sensor.garbage_collection_data.attributes.list[1].nextpickupdate | regex_replace(find="^.* ", replace="", ignorecase=False), "%d-%m-%Y") }}'
+        device_class: timestamp
+      renovation_rest_mad:
+        value_template: '{{ strptime(states.sensor.garbage_collection_data.attributes.list[2].nextpickupdate | regex_replace(find="^.* ", replace="", ignorecase=False), "%d-%m-%Y") }}'
+        device_class: timestamp
+      renovation_4delt_beholder:
+        value_template: '{{ strptime(states.sensor.garbage_collection_data.attributes.list[3].nextpickupdate | regex_replace(find="^.* ", replace="", ignorecase=False), "%d-%m-%Y") }}'
+        device_class: timestamp
+
+  - platform: template
+    sensors:
+      renovation_storskrald_formatted:
+        friendly_name: Storskrald
+        value_template: >-
+          {% set date = states.sensor.renovation_storskrald.state %}
+          {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
+
+          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
+          {% set weekday = weekdays[weekdaynumber] %}
+
+          {% set days = (((as_timestamp(date))-as_timestamp(now())) | int /60/1440) | round(0, "ceil") %}
+          {% if days == 0 %}
+            Tømmes idag ({{ weekday }} d. {{ strDate }})
+          {% elif days == 1 %}
+            Tømmes imorgen ({{ weekday }} d. {{ strDate }})
+          {% else%}
+            Tømmes om {{ days }} dage ({{ weekday }} d. {{ strDate }})
+          {% endif %}
+      renovation_haveaffald_formatted:
+        friendly_name: Haveaffald
+        value_template: >-
+          {% set date = states.sensor.renovation_haveaffald.state %}
+          {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
+
+          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
+          {% set weekday = weekdays[weekdaynumber] %}
+
+          {% set days = (((as_timestamp(date))-as_timestamp(now())) | int /60/1440) | round(0, "ceil") %}
+          {% if days == 0 %}
+            Tømmes idag ({{ weekday }} d. {{ strDate }})
+          {% elif days == 1 %}
+            Tømmes imorgen ({{ weekday }} d. {{ strDate }})
+          {% else%}
+            Tømmes om {{ days }} dage ({{ weekday }} d. {{ strDate }})
+          {% endif %}
+      renovation_rest_mad_formatted:
+        friendly_name: Rest, mad
+        value_template: >-
+          {% set date = states.sensor.renovation_rest_mad.state %}
+          {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
+
+          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
+          {% set weekday = weekdays[weekdaynumber] %}
+
+          {% set days = (((as_timestamp(date))-as_timestamp(now())) | int /60/1440) | round(0, "ceil") %}
+          {% if days == 0 %}
+            Tømmes idag ({{ weekday }} d. {{ strDate }})
+          {% elif days == 1 %}
+            Tømmes imorgen ({{ weekday }} d. {{ strDate }})
+          {% else%}
+            Tømmes om {{ days }} dage ({{ weekday }} d. {{ strDate }})
+          {% endif %}
+      renovation_4delt_beholder_formatted:
+        friendly_name: 4delt beholder
+        value_template: >-
+          {% set date = states.sensor.renovation_4delt_beholder.state %}
+          {% set strDate = as_timestamp(date) | timestamp_custom("%d/%m-%Y", true) %}
+
+          {% set weekdays = ["Mandag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"] %}
+          {% set weekdaynumber = strptime(strDate, "%d/%m-%Y").weekday() | int %}
+          {% set weekday = weekdays[weekdaynumber] %}
+
+          {% set days = (((as_timestamp(date))-as_timestamp(now())) | int /60/1440) | round(0, "ceil") %}
+          {% if days == 0 %}
+            Tømmes idag ({{ weekday }} d. {{ strDate }})
+          {% elif days == 1 %}
+            Tømmes imorgen ({{ weekday }} d. {{ strDate }})
+          {% else%}
+            Tømmes om {{ days }} dage ({{ weekday }} d. {{ strDate }})
+          {% endif %}
