@@ -1,13 +1,4 @@
 # Renoweb / Affaldsportal i Homeassistant
-Dette er skrevet med stor! inspiration fra Esben, og Jacob.
-
-Jeg havde mange af de samme ønsker som Esben, og store dele af denne proces er tyv stjålet fra ham. Igen tak Esben.
-
-For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-assistant-gruppe/affaldgenbrug-afhentning-via-renovationselskabets-api/645979892637386/
-
-Nu til min udfordring. 
-
-Min kommune har en statisk kalender på deres hjemmeside, og udstiller ikke selv noget API jeg kan hive data fra. 
 
 Liste med understøttede kommuner pr. 29-11-2020
 * Allerød
@@ -39,6 +30,16 @@ Liste med understøttede kommuner pr. 29-11-2020
 * Tårnby
 * Vejen
 * Aalborg
+
+Dette er skrevet med stor! inspiration fra Esben, og Jacob.
+
+Jeg havde mange af de samme ønsker som Esben, og store dele af denne proces er tyv stjålet fra ham. Igen tak Esben.
+
+For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-assistant-gruppe/affaldgenbrug-afhentning-via-renovationselskabets-api/645979892637386/
+
+Nu til min udfordring. 
+
+Min kommune har en statisk kalender på deres hjemmeside, og udstiller ikke selv noget API jeg kan hive data fra. 
 
 Tilgengæld har de et sammenarbejde med et firma som laver en app, “Affaldsportal”. Men altså, hvem gider have en app mere ?
 
