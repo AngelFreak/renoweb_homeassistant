@@ -9,6 +9,37 @@ Nu til min udfordring.
 
 Min kommune har en statisk kalender på deres hjemmeside, og udstiller ikke selv noget API jeg kan hive data fra. 
 
+Liste med understøttede kommuner pr. 29-11-2020
+* Allerød
+* Brøndby
+* Dragør
+* Egedal
+* Esbjerg
+* Fredensborg
+* Frederikssund
+* Gentofte
+* Gladsaxe
+* Glostrup
+* Greve
+* Helsingør
+* Herlev
+* Hillerød
+* Hvidovre
+* Høje-Taastrup
+* Køge
+* Lejre
+* Rebild
+* Ringkøbing-Skjern
+* Roskilde
+* Rudersdal
+* Solrød
+* Stevns
+* Svendborg
+* Sweco Demo
+* Tårnby
+* Vejen
+* Aalborg
+
 Tilgengæld har de et sammenarbejde med et firma som laver en app, “Affaldsportal”. Men altså, hvem gider have en app mere ?
 
 Deres API var “desværre” beskyttet, og jeg skulle finde en key at sende med mine API kald. Så jeg kom frem til at den måtte jeg kunne få ud af deres app. 
