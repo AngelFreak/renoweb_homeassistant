@@ -30,12 +30,21 @@ Den værdi som skal bruges er "municipalitycode"
 
 ![Image Init Postman request](https://github.com/AngelFreak/renoweb_homeassistant/blob/main/postman_init_request.png)
 
-Herefter laves et request medmunicipalitycode på https://servicesgh.renoweb.dk/v1_13/GetJSONAdress.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218, men fik dette svar:{"status": {"id": 2,"status": null,"msg": "The roadid is empty."}} Jeg mangler altså et roadid.
+Herefter laves et request medmunicipalitycode på https://servicesgh.renoweb.dk/v1_13/GetJSONAdress.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218, men fik dette svar
+```json
+{"status": {"id": 2,"status": null,"msg": "The roadid is empty."}} Jeg mangler altså et roadid.
+```
 
-Heldigvis gives et roadname parameter, som returnere et id. https://servicesgh.renoweb.dk/v1_13/GetJSONRoad.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&roadname=Steinmannsvej som returnere: {"status":{"id":0,"status":null,"msg":"Ok"},"list":[{"id":782,"name":"Steinmannsvej (4600)","fulllist":true}]}
+Heldigvis kan der gives et roadname parameter, som returnere et id. https://servicesgh.renoweb.dk/v1_13/GetJSONRoad.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&roadname=Steinmannsvej
+```json
+{"status":{"id":0,"status":null,"msg":"Ok"},"list":[{"id":782,"name":"Steinmannsvej (4600)","fulllist":true}]}
+```
 
 Nu hiver jeg en liste over min vej https://servicesgh.renoweb.dk/v1_13/GetJSONAdress.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&roadid=782&showall=1 finder min adresses id, og laver det endelige kald https://servicesgh.renoweb.dk/v1_13/GetJSONContainerList.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&adressId=7650&fullinfo=1&supportsSharedEquipment=1
-Nu har jeg en fin liste der er struktureret således: {"status": {"id": 0,"status": null,"msg": "Ok"},"list": [{"id": 38283,"rwadrid": 7650,"customerid": 18723,"name": "Storskrald stk/STORSKRALD","count": "1","module": {"id": 2,"name": "Storskrald","fractionname": "Storskrald"....
+Nu har jeg en fin liste der er struktureret således.
+```json
+{"status": {"id": 0,"status": null,"msg": "Ok"},"list": [{"id": 38283,"rwadrid": 7650,"customerid": 18723,"name": "Storskrald stk/STORSKRALD","count": "1","module": {"id": 2,"name": "Storskrald","fractionname": "Storskrald"
+```
 
 ![Image Final Postman request](https://github.com/AngelFreak/renoweb_homeassistant/blob/main/postman_final_request.png)
 
