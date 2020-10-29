@@ -17,8 +17,11 @@ API key: 346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218
 APP identifier: DDDD4A1D-DDD1-4436-DDDD-3F374DD683A1
 ```
 
-Så nu er det “bare” at lave forespørgsler til deres API, og finde din Kommunes data struktur. 
-Det er helt sikkert ikke ens i alle kommuner, men jeg vil tage udgangspunkt i min egen. Dette kan med fordel gøres med Postman (https://www.postman.com/downloads/), som er et vældig godt API værktøj.
+Så nu er det “bare” at lave forespørgsler til deres API, og finde din Kommunes data struktur.
+
+Datastrukturen er nok ikke ens i alle kommuner, men jeg vil tage udgangspunkt i min egen. 
+
+Dette kan med fordel gøres med Postman (https://www.postman.com/downloads/), som er et vældig godt API værktøj.
 
 ## Procedure
 
@@ -41,6 +44,7 @@ Heldigvis kan der gives et roadname parameter, som returnere et id. https://serv
 ```
 
 Nu hiver jeg en liste over min vej https://servicesgh.renoweb.dk/v1_13/GetJSONAdress.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&roadid=782&showall=1 finder min adresses id, og laver det endelige kald https://servicesgh.renoweb.dk/v1_13/GetJSONContainerList.aspx?municipalitycode=259&apikey=346B43B0-D1F0-4AFC-9EE8-C4AD1BFDC218&adressId=7650&fullinfo=1&supportsSharedEquipment=1
+
 Nu har jeg en fin liste der er struktureret således.
 ```json
 {"status": {"id": 0,"status": null,"msg": "Ok"},"list": [{"id": 38283,"rwadrid": 7650,"customerid": 18723,"name": "Storskrald stk/STORSKRALD","count": "1","module": {"id": 2,"name": "Storskrald","fractionname": "Storskrald"
