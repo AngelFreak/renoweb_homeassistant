@@ -1,11 +1,9 @@
 
 # Renoweb / Affaldsportal in Homeassistant
 
-## Intro
+## Intro / udfordring
 
-Nu til min udfordring. 
-
-Min kommune har en statisk kalender på deres hjemmeside, og udstiller ikke selv noget API jeg kan hive data fra. 
+Min kommune udstiller ikke selv noget API til rådighed jeg kan hive data fra, kun en statisk PDF kalender, eller en CSV fil. 
 
 Tilgengæld har de et sammenarbejde med et firma som laver en app, “Affaldsportal”. Men altså, hvem gider have en app mere ?
 
@@ -21,13 +19,6 @@ APP identifier: DDDD4A1D-DDD1-4436-DDDD-3F374DD683A1
 
 Så nu er det “bare” at lave forespørgsler til deres API, og finde din Kommunes data struktur. 
 Det er helt sikkert ikke ens i alle kommuner, men jeg vil tage udgangspunkt i min egen. Dette kan med fordel gøres med Postman (https://www.postman.com/downloads/), som er et vældig godt API værktøj.
-
-## Kreditering
-Dette er skrevet med stor! inspiration fra Esben, og Jacob.
-
-Jeg havde mange af de samme ønsker som Esben, og store dele af denne proces er tyv stjålet fra ham. Igen tak Esben.
-
-For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-assistant-gruppe/affaldgenbrug-afhentning-via-renovationselskabets-api/645979892637386/
 
 ## Procedure
 
@@ -60,6 +51,12 @@ Det endelige resultat ser således ud:
 Det kan gøres pænere, men min HA kode er ikke skrevet til deling (endnu).
 Sig til hvis nogle har forslag til ændringer, forbedringer eller forslag.
 
+## Kreditering
+Dette er skrevet med stor! inspiration fra Esben, og Jacob.
+
+Jeg havde mange af de samme ønsker som Esben, og store dele af denne proces er tyv stjålet fra ham. Igen tak Esben.
+
+For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-assistant-gruppe/affaldgenbrug-afhentning-via-renovationselskabets-api/645979892637386/
 
 ## Supporterede kommuner
 Listen er opdateret: 29-11-2020
