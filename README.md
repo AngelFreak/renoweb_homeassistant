@@ -72,11 +72,11 @@ Jeg havde mange af de samme ønsker som Esben, og store dele af denne proces er 
 For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-assistant-gruppe/affaldgenbrug-afhentning-via-renovationselskabets-api/645979892637386/
 
 ## Supporterede kommuner
-Listen er opdateret: 29-11-2020
+Listen er opdateret: 10-04-2021 19:30:00
 
 ```txt
-Allerød - ID: 201
-Brøndby - ID: 153
+Allerød- ID: 201
+Brøndby- ID: 153
 Dragør - ID: 155
 Egedal - ID: 240
 Esbjerg - ID: 561
@@ -86,6 +86,7 @@ Gentofte - ID: 157
 Gladsaxe - ID: 159
 Glostrup - ID: 161
 Greve - ID: 253
+Halsnæs - ID: 260
 Helsingør - ID: 217
 Herlev - ID: 163
 Hillerød - ID: 219
@@ -93,6 +94,7 @@ Hvidovre - ID: 167
 Høje-Taastrup - ID: 169
 Køge - ID: 259
 Lejre - ID: 350
+Lyngby-Taarbæk - ID: 173
 Rebild - ID: 840
 Ringkøbing-Skjern - ID: 760
 Roskilde - ID: 265
@@ -100,6 +102,9 @@ Rudersdal - ID: 230
 Solrød - ID: 269
 Stevns - ID: 336
 Svendborg - ID: 479
+Sweco Demo - ID: 10210
+Sweco Test B - ID: 16161
+Sweco Test T - ID: 20161
 Tårnby - ID: 185
 Vejen - ID: 575
 Aalborg - ID: 851
