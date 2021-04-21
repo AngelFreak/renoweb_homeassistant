@@ -102,9 +102,6 @@ Rudersdal - ID: 230
 Solrød - ID: 269
 Stevns - ID: 336
 Svendborg - ID: 479
-Sweco Demo - ID: 10210
-Sweco Test B - ID: 16161
-Sweco Test T - ID: 20161
 Tårnby - ID: 185
 Vejen - ID: 575
 Aalborg - ID: 851
