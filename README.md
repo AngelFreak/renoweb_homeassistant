@@ -75,8 +75,8 @@ For hans oprindelige skriv klik her: https://www.facebook.com/notes/dansk-home-a
 Listen er opdateret: 29-11-2020
 
 ```txt
-Allerød - ID: 201
-Brøndby - ID: 153
+Allerød- ID: 201
+Brøndby- ID: 153
 Dragør - ID: 155
 Egedal - ID: 240
 Esbjerg - ID: 561
@@ -86,6 +86,7 @@ Gentofte - ID: 157
 Gladsaxe - ID: 159
 Glostrup - ID: 161
 Greve - ID: 253
+Halsnæs - ID: 260
 Helsingør - ID: 217
 Herlev - ID: 163
 Hillerød - ID: 219
@@ -93,6 +94,7 @@ Hvidovre - ID: 167
 Høje-Taastrup - ID: 169
 Køge - ID: 259
 Lejre - ID: 350
+Lyngby-Taarbæk - ID: 173
 Rebild - ID: 840
 Ringkøbing-Skjern - ID: 760
 Roskilde - ID: 265
